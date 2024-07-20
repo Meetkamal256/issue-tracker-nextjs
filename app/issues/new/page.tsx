@@ -1,16 +1,16 @@
 "use client";
-import { useState } from "react";
-import { TextField, Button, Callout, Text } from "@radix-ui/themes";
-import dynamic from "next/dynamic";
-import { useForm, Controller } from "react-hook-form";
-import axios from "axios";
-import "easymde/dist/easymde.min.css";
-import { useRouter } from "next/navigation";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { createIssueSchemas } from "@/app/validationSchemas";
-import { z } from "zod";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import Spinner from "@/app/components/Spinner";
+import { createIssueSchemas } from "@/app/validationSchemas";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button, Callout, TextField } from "@radix-ui/themes";
+import axios from "axios";
+import "easymde/dist/easymde.min.css";
+import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
 
 type IssueForm = z.infer<typeof createIssueSchemas>;
 
@@ -30,7 +30,7 @@ const NewIssuePage = () => {
   });
   const [error, setError] = useState("");
   const [isSubmitting, setSubmitting] = useState(false);
-
+  
   const onSubmit = handleSubmit(async (data) => {
     try {
       setSubmitting(true);
