@@ -3,6 +3,7 @@ import prisma from "@/prisma/client";
 import { Card, Heading, Text } from "@radix-ui/themes";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import delay from "delay";
 
 interface Props {
   params: { id: string };
@@ -13,6 +14,7 @@ const IssueDetailPage = async ({ params }: Props) => {
     where: { id: parseInt(params.id) },
   });
   if (!issue) notFound();
+  await delay(3000);
   return (
     <div>
       <Heading as="h2">{issue.title}</Heading>
