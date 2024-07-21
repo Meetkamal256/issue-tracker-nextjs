@@ -53,9 +53,9 @@ const NewIssuePage = () => {
           placeholder="Title"
           {...register("title")}
         ></TextField.Root>
-
+        
         <ErrorMessage>{errors.title?.message}</ErrorMessage>
-
+        
         <Controller
           name="description"
           control={control}
@@ -63,7 +63,7 @@ const NewIssuePage = () => {
             <SimpleMDE placeholder="Description" {...field} />
           )}
         />
-
+        
         <ErrorMessage>{errors.description?.message}</ErrorMessage>
         <Button disabled={isSubmitting}>
           Submit New Issue {isSubmitting && <Spinner />}
