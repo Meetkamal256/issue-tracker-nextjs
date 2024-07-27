@@ -12,7 +12,7 @@ export async function PATCH(
   if (!session) {
     return NextResponse.json({}, { status: 401 });
   }
-
+  
   const body = await request.json();
   const validation = issueSchema.safeParse(body);
   if (!validation.success)
@@ -40,16 +40,16 @@ export async function DELETE(
   if (!session) {
     return NextResponse.json({}, { status: 401 });
   }
-
+  
   const issue = await prisma.issue.findUnique({
     where: { id: parseInt(params.id) },
   });
-
+  
   if (!issue)
     return NextResponse.json({ error: "Invalid Issue" }, { status: 404 });
   await prisma.issue.delete({
     where: { id: issue.id },
   });
-
+  
   return NextResponse.json({});
 }
