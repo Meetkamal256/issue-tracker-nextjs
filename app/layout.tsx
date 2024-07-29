@@ -9,10 +9,10 @@ import Navbar from "./Navbar";
 import AuthProvider from "./auth/Provider";
 import QueryClientProvider from "./QueryClientProvider";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+// const inter = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-inter",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}, sans-serif`}>
+      <body className="sans-serif">
         <QueryClientProvider>
           <AuthProvider>
             <Theme accentColor="purple" panelBackground="solid" scaling="110%">
