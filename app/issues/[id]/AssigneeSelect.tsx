@@ -10,9 +10,9 @@ const AssigneeSelect = ({ issue }: { issue: Issue }) => {
   const { data: users, error, isLoading } = useUsers();
   
   if (isLoading) return <Skeleton />;
-
+  
   if (error) return null;
-
+  
   const assignedIssue = async (userId: string) => {
     try {
       await axios.patch("/api/issues/" + issue.id, {
@@ -22,7 +22,7 @@ const AssigneeSelect = ({ issue }: { issue: Issue }) => {
       toast.error("Changes could not be saved");
     }
   };
-
+  
   return (
     <>
       <Select.Root
