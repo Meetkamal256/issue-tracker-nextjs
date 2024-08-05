@@ -18,7 +18,7 @@ const IssuesPage = async ({ searchParams }: Props) => {
   const status = statuses.includes(searchParams.status)
     ? searchParams.status
     : undefined;
-
+  
   const orderBy = columnNames.includes(searchParams.orderBy)
     ? { [searchParams.orderBy]: "asc" }
     : undefined;
@@ -30,9 +30,9 @@ const IssuesPage = async ({ searchParams }: Props) => {
     skip: (page - 1) * pageSize,
     take: pageSize,
   });
-
+  
   const issueCount = await prisma.issue.count({ where: { status } });
-
+  
   return (
     <Flex direction="column" gap="3">
       <IssueAction />
