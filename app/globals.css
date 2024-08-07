@@ -14,7 +14,7 @@
 }
 
 body {
-  color: red;
+  color: rgb(var(--foreground-rgb));
   font-family: var(--font-inter), sans-serif;
 }
 
