@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Issue Tracker
 
-## Getting Started
+## Screenshot
 
-First, run the development server:
+![issue-tracker](https://github.com/user-attachments/assets/851e2120-45e5-41bc-b83a-bed101f67a8e)
 
-```bash
+
+## Live Demo
+
+[https://issue-tracker-nextjs-two.vercel.app/]
+
+## Overview
+
+**Issue Tracker** is a robust web application designed to streamline issue management for development teams. Built with modern technologies, this application provides a comprehensive platform for tracking and managing issues throughout their lifecycle.
+
+## Features
+
+- **User Authentication:** Secure login and registration system to ensure that only authorized users can access and manage issues.
+- **Create and Assign Issues:** Easily create new issues and assign them to team members with detailed information and status updates.
+- **Modify Issues:** Update existing issues with new information, track changes, and manage the issue status effectively.
+- **Pagination:** Navigate through large sets of issues with smooth pagination to enhance user experience.
+- **Mobile Responsive:** Fully responsive design ensures optimal usability on all devices, including smartphones and tablets.
+- **Dashboard with Bar Chart:** Visualize issue data and track progress with an intuitive dashboard featuring a bar chart for clear insights.
+
+## Technologies Used
+
+- **Next.js:** Framework for server-rendered React applications.
+- **TypeScript:** Superset of JavaScript for static typing and improved developer experience.
+- **Tailwind CSS:** Utility-first CSS framework for styling and design.
+- **Radix UI:** Component library for building accessible and customizable UI components.
+- **PostgreSQL:** Powerful, open-source relational database for data storage.
+- **Supabase:** Backend-as-a-Service platform for real-time databases and authentication.
+
+
+
+## Installation
+
+1. Clone the repository:
+   
+   ```bash
+   git clone https://github.com/Meetkamal256/issue-tracker-nextjs.git
+   ```
+
+2. Navigate to the project directory:
+   
+   ```bash
+   cd ./
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+Run the development server:
+
+``` bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
