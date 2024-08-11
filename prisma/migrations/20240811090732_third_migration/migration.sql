@@ -8,7 +8,7 @@ CREATE TABLE "Issue" (
     "description" TEXT NOT NULL,
     "status" "Status" NOT NULL DEFAULT 'OPEN',
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "UpdatedAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
     "assignedToUserId" VARCHAR(255),
 
     CONSTRAINT "Issue_pkey" PRIMARY KEY ("id")
