@@ -10,7 +10,7 @@ CREATE TABLE "Issue" (
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "UpdatedAt" TIMESTAMP(3) NOT NULL,
     "assignedToUserId" VARCHAR(255),
-    
+
     CONSTRAINT "Issue_pkey" PRIMARY KEY ("id")
 );
 
